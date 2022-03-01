@@ -1693,7 +1693,7 @@ function timestep:on_fire(info)
         skynet_m.log(string.format("Fire can't find user %d.", info.userid))
         return
     end
-    info.cannon = binfo.kind
+    user_info.cannon = binfo.kind
     local msg = string.pack(">I2>I4>I4>I4B>f>I4>I4>I8B>I4>I8", s_to_c.fire, bullet.id, bullet.self_id, binfo.kind,
                             user_info.pos, bullet.angle, binfo.multi, info.costGold, info.fishScore, bullet.rotate,
                             bullet.target, info.awardPool)
